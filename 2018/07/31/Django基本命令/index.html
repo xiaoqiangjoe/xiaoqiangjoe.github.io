@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的博客 | Hexo</title>
+  <title>Django 基本命令 | Hexo</title>
   <meta name="author" content="John Doe">
   
-  <meta name="description" content="Django 基本命令[TOC]
-1 新建一个django project1django-admin.py startproject project_name
-2 启动项目123456789101112cd 项目名python manage.py runserver# 当提示端口被占用的时候，可以用">
+  <meta name="description" content="1 新建一个django project1django-admin.py startproject project_name
+2 启动项目123456789101112cd 项目名python manage.py runserver# 当提示端口被占用的时候，可以用其它端口：python manag">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="我的博客"/>
+  <meta property="og:title" content="Django 基本命令"/>
   <meta property="og:site_name" content="Hexo"/>
 
   
@@ -57,14 +56,13 @@
       
       
   
-    <h1 class="title">我的博客</h1>
+    <h1 class="title">Django 基本命令</h1>
   
 
     </header>
     <div class="entry">
       
-        <h1 id="Django-基本命令"><a href="#Django-基本命令" class="headerlink" title="Django 基本命令"></a>Django 基本命令</h1><p>[TOC]</p>
-<h2 id="1-新建一个django-project"><a href="#1-新建一个django-project" class="headerlink" title="1 新建一个django project"></a>1 新建一个django project</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin.py startproject project_name</span><br></pre></td></tr></table></figure>
+        <h2 id="1-新建一个django-project"><a href="#1-新建一个django-project" class="headerlink" title="1 新建一个django project"></a>1 新建一个django project</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin.py startproject project_name</span><br></pre></td></tr></table></figure>
 <h2 id="2-启动项目"><a href="#2-启动项目" class="headerlink" title="2 启动项目"></a>2 启动项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">cd 项目名</span><br><span class="line">python manage.py runserver</span><br><span class="line"></span><br><span class="line"># 当提示端口被占用的时候，可以用其它端口：</span><br><span class="line">python manage.py runserver 8001</span><br><span class="line">python manage.py runserver 9999</span><br><span class="line">（当然也可以kill掉占用端口的进程，具体后面有讲，此处想知道的同学可查下 lsof 命令用法）</span><br><span class="line"></span><br><span class="line"># 监听机器所有可用 ip （电脑可能有多个内网ip或多个外网ip）</span><br><span class="line">python manage.py runserver 0.0.0.0:8000</span><br><span class="line"># 如果是外网或者局域网电脑上可以用其它电脑查看开发服务器</span><br><span class="line"># 访问对应的 ip加端口，比如 http://172.16.20.2:8000</span><br></pre></td></tr></table></figure>
 <h2 id="3-创建app"><a href="#3-创建app" class="headerlink" title="3 创建app"></a>3 创建app</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp app01</span><br></pre></td></tr></table></figure>
 <h2 id="4-数据库迁移"><a href="#4-数据库迁移" class="headerlink" title="4 数据库迁移"></a>4 数据库迁移</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations # 创建更改的文件</span><br><span class="line">python manage.py migrate        # 将生成的py文件应用到数据库</span><br></pre></td></tr></table></figure>
